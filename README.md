@@ -12,58 +12,14 @@ The data set is available in a compressed format in '/data/Facial_emotion_images
 - Notebook '1-Data-Preprocessing-Facial-Detection.ipynb' creates '/data/face_detection' directory to store preprocessed data following facial detection screening.
 - Notebook '2-Data-Preprocessing-Remove-Duplicates.ipynb' creates '/data/unique_images' directory to store preprocessed data after removing duplicate images.
 
-After data preprocessing, the data directory has this structure: 
+After data preprocessing, the data directory contains:
+- Facial_emotion_images.zip 	# Original dataset
+- Facial_emotion_images/	# Original dataset unpacked
+- face_detection/		# Dataset after facial detection screening
+- unique_images/		# Dataset after removing duplicates
 
-data/
-├── Facial_emotion_images.zip
-├── Facial_emotion_images/
-│   ├── test/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── train/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── validation/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-├── face_detection/
-│   ├── test/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── train/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── validation/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-├── unique_images/
-│   ├── test/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── train/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
-│   ├── validation/
-│   │   ├── happy/
-│   │   ├── neutral/
-│   │   ├── sad/
-│   │   ├── surprise/
+Each of the dataset directories has 'test', 'train', and 'validation' subdirectories. 
+Each of the 'test', 'train', and 'validation' has 4 subdirectories: 'happy', 'neutral', 'sad', 'surprise'.   
 
 ## Models
 
@@ -145,4 +101,9 @@ This notebook contains the final model testing on the unseen test data. Performe
 - Make predictions on test data
 - Show confusion matrix and classification report
 - Visualize misclassified images
+
+## Images
+- model_versions.png shows the model training variations
+- model_accuracies.png shows the training/validation performace of all models
+- emotion_class_performance.png shows the emotion class performance of the best performing models
 
